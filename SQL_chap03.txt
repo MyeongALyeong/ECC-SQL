@@ -1,0 +1,52 @@
+SELECT * FROM sample31;
+SELECT * FROM sample31 ORDER BY age;
+SELECT * FROM sample31 ORDER BY address;
+
+SELECT * FROM sample31 ORDER BY age DESC;
+SELECT * FROM sample311 ORDER BY a;
+
+SELECT * FROM sample32 ORDER BY a, b;
+SELECT * FROM sample32 ORDER BY b, a;
+SELECT * FROM sample32 ORDER BY a, b DESC;
+
+SELECT * FROM sample33 LIMIT 3;
+SELECT * FROM sample33 ORDER BY no DESC LIMIT 3;
+
+SELECT *, price*quantity AS amount FROM sample34;
+SELECT *, price*quantity AS amount FROM sample34 WHERE price*quantity >= 2000;
+SELECT *, price*quantity AS amount FROM sample34 ORDER BY price*quantity DESC;
+
+SELECT amount, ROUND(amount) FROM sample341;
+
+SELECT *, CONCAT(quantity, unit) FROM sample35;
+
+SELECT CURRENT_TIMESTAMP;
+
+SELECT a, CASE WHEN a IS NULL THEN 0 ELSE a END AS "a(null=0)" FROM sample37;
+SELECT a, COALESCE(a, 0) AS "a(null=0)"FROM sample37;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

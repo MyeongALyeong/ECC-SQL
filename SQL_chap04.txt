@@ -1,0 +1,15 @@
+SELECT a AS "코드",
+    -> CASE
+    -> WHEN a = 1 THEN '남자'
+    -> WHEN a = 2 THEN '여자'
+    -> ELSE '미지정'
+    -> END AS "성별" FROM sample37;
+
+DESC sample41;
+
+INSERT INTO sample41
+    -> VALUES(1, 'abc', '2025-09-18');
+
+INSERT INTO sample41 (no, a) VALUES (2, 'xyz');
+
+DELETE FROM sample41 WHERE no = 3;
