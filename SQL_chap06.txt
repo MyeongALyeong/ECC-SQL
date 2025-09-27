@@ -1,0 +1,26 @@
+CREATE TABLE sample631(
+    -> a INTEGER NOT NULL,
+    -> b INTEGER NOT NULL UNIQUE,
+    -> c VARCHAR(30));
+
+CREATE TABLE sample632(
+    -> no INTEGER NOT NULL,
+    -> sub_no INTEGER NOT NULL,
+    -> name VARCHAR(30),
+    -> PRIMARY KEY(no, sub_no));
+
+ALTER TABLE sample631 MODIFY c VARCHAR(30) NOT NULL;
+ALTER TABLE sample631 ADD CONSTRAINT pkey_sample631 PRIMARY KEY(a);
+
+CREATE TABLE sample62(
+    -> no INTEGER NOT NULL,
+    -> a VARCHAR(30),
+    -> b DATE);
+
+DESC sample62;
+
+ALTER TABLE sample62 ADD newcol INTEGER;
+ALTER TABLE sample62 MODIFY newcol VARCHAR(20);
+ALTER TABLE sample62 DROP newcol;
+
+
