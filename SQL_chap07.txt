@@ -1,0 +1,7 @@
+SELECT * FROM sample71_a;
+SELECT * FROM sample72_b;
+
+SELECT * FROM sample71_a UNION SELECT * FROM sample71_b;
+SELECT a AS c FROM sample71_a UNION SELECT b AS c FROM sample71_b ORDER BY c;
+SELECT * FROM sample71_a UNION ALL SELECT * FROM sample71_b;
+

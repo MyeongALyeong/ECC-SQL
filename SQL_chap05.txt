@@ -18,6 +18,15 @@ SELECT name, COUNT(name) FROM sample51 GROUP BY name;
 SELECT name, COUNT(name) FROM sample51 GROUP BY name HAVING COUNT(name) = 1;
 SELECT name, COUNT(name), SUM(quantity) FROM sample51 GROUP BY name ORDER BY SUM(quantity) DESC;
 
+SELECT (SELECT COUNT(*) FROM sample51) AS sql1,
+    -> (SELECT COUNT(*) FROM sample54) AS sql2;
+
+INSERT INTO sample541 VALUES( (SELECT COUNT(*) FROM sample51), (SELECT COUNT(8) FROM sample54));
+
+
+
+
+
 
 
 
